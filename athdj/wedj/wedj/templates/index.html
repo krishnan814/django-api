@@ -1,0 +1,37 @@
+{% load static %}
+{% static "images" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django web</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/styles.css' %}">
+</head>
+<body>
+
+    
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>In</p>
+        <p> Below data are getting from the model were iam create names as people model<p>
+        {% for pe in peo %}
+        <ul>
+            <li>
+                Id : {{pe.id}}
+            </li>  
+            <li>
+                Name : {{pe.name}}
+            </li> 
+            <img src = "{{pe.img.url}}" alt="">
+        </ul>
+        
+        
+    {% endfor %}
+    </header>
+
+  
+
+</body>
+</html>
+
